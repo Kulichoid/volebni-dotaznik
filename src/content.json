@@ -1,0 +1,232 @@
+{
+  "demo": true,
+  "year": 2026,
+  "parties": [
+    {
+      "id": "spd",
+      "number": 1,
+      "name": "SPD pro Prahu 5 s podporou PRO a nezávislých kandidátů",
+      "shortName": "SPD pro Prahu 5",
+      "logo": "spd.svg",
+      "logoAlt": "Logo SPD"
+    },
+    {
+      "id": "top-lidovci",
+      "number": 2,
+      "name": "TOP Lidovci a Nezávislí",
+      "shortName": "TOP Lidovci a Nezávislí",
+      "logo": "top.svg",
+      "logoAlt": "Logo TOP 09, člena koalice"
+    },
+    {
+      "id": "ano",
+      "number": 3,
+      "name": "ANO 2011",
+      "shortName": "ANO 2011",
+      "logo": "ano.svg",
+      "logoAlt": "Logo ANO"
+    },
+    {
+      "id": "praha-5-sobe",
+      "number": 4,
+      "name": "PRAHA 5 SOBĚ",
+      "shortName": "Praha 5 Sobě",
+      "logo": "sobe.svg",
+      "logoAlt": "Logo Praha 5 Sobě"
+    },
+    {
+      "id": "ods",
+      "number": 5,
+      "name": "Občanská demokratická strana",
+      "shortName": "ODS",
+      "logo": "ods.jpg",
+      "logoAlt": "Logo ODS"
+    },
+    {
+      "id": "motoriste-svobodni",
+      "number": 6,
+      "name": "Motoristé sobě a Svobodní",
+      "shortName": "Motoristé a Svobodní",
+      "logo": "motoriste.png",
+      "logoAlt": "Logo Motoristé sobě, člena koalice"
+    },
+    {
+      "id": "nase-praha-5",
+      "number": 7,
+      "name": "Naše Praha 5",
+      "shortName": "Naše Praha 5",
+      "logo": "nase.png",
+      "logoAlt": "Logo Naše Praha 5"
+    },
+    {
+      "id": "pirati",
+      "number": 8,
+      "name": "Česká pirátská strana",
+      "shortName": "Piráti",
+      "logo": "pirati.svg",
+      "logoAlt": "Logo Piráti"
+    },
+    {
+      "id": "asocialove",
+      "number": 9,
+      "name": "Česká strana asociálů",
+      "shortName": "Česká strana asociálů",
+      "logo": "csa.png",
+      "logoAlt": "Grafická značka České strany asociálů"
+    },
+    {
+      "id": "rezidenti",
+      "number": 10,
+      "name": "REZIDENTI 5P",
+      "shortName": "Rezidenti 5P",
+      "logo": "rezidenti.svg",
+      "logoAlt": "Textová značka 5P podle webu Rezidenti 5P"
+    },
+    {
+      "id": "stan",
+      "number": 11,
+      "name": "STAROSTOVÉ A NEZÁVISLÍ",
+      "shortName": "STAN",
+      "logo": "stan.svg",
+      "logoAlt": "Logo STAN"
+    },
+    {
+      "id": "sen",
+      "number": 12,
+      "name": "SEN PRO PRAHU 5 s podporou senátora Václava Lásky a Společnosti na ochranu Prokopského údolí",
+      "shortName": "SEN pro Prahu 5",
+      "logo": "sen.svg",
+      "logoAlt": "Logo SEN ze stránky SEN pro Prahu 5"
+    }
+  ],
+  "questions": [
+    {
+      "id": "doprava",
+      "topic": "Doprava a parkování",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit?"
+    },
+    {
+      "id": "priroda",
+      "topic": "Příroda a veřejný prostor",
+      "text": "Quisque vitae justo vel nunc ullamcorper consequat?"
+    },
+    {
+      "id": "bydleni",
+      "topic": "Bydlení a rozvoj",
+      "text": "Donec at sem ac libero tincidunt sollicitudin?"
+    },
+    {
+      "id": "skoly",
+      "topic": "Školy a školky",
+      "text": "Mauris euismod, sapien sed facilisis, velit arcu?"
+    },
+    {
+      "id": "komunita",
+      "topic": "Kultura a sousedský život",
+      "text": "Sed ut perspiciatis unde omnis iste natus error?"
+    },
+    {
+      "id": "radnice",
+      "topic": "Otevřená radnice",
+      "text": "Ut enim ad minima veniam, quis nostrum exercitationem?"
+    }
+  ],
+  "answers": {
+    "spd": {
+      "doprava": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "priroda": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor.",
+      "bydleni": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "skoly": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor.",
+      "komunita": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "radnice": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor."
+    },
+    "top-lidovci": {
+      "doprava": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "priroda": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor.",
+      "bydleni": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "skoly": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor.",
+      "komunita": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "radnice": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor."
+    },
+    "ano": {
+      "doprava": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "priroda": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor.",
+      "bydleni": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "skoly": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor.",
+      "komunita": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "radnice": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor."
+    },
+    "praha-5-sobe": {
+      "doprava": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "priroda": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor.",
+      "bydleni": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "skoly": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor.",
+      "komunita": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "radnice": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor."
+    },
+    "ods": {
+      "doprava": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "priroda": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor.",
+      "bydleni": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "skoly": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor.",
+      "komunita": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "radnice": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor."
+    },
+    "motoriste-svobodni": {
+      "doprava": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "priroda": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor.",
+      "bydleni": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "skoly": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor.",
+      "komunita": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "radnice": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor."
+    },
+    "nase-praha-5": {
+      "doprava": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "priroda": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor.",
+      "bydleni": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "skoly": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor.",
+      "komunita": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "radnice": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor."
+    },
+    "pirati": {
+      "doprava": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "priroda": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor.",
+      "bydleni": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "skoly": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor.",
+      "komunita": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "radnice": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor."
+    },
+    "asocialove": {
+      "doprava": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "priroda": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor.",
+      "bydleni": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "skoly": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor.",
+      "komunita": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "radnice": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor."
+    },
+    "rezidenti": {
+      "doprava": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "priroda": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor.",
+      "bydleni": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "skoly": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor.",
+      "komunita": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "radnice": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor."
+    },
+    "stan": {
+      "doprava": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "priroda": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor.",
+      "bydleni": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "skoly": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor.",
+      "komunita": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "radnice": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor."
+    },
+    "sen": {
+      "doprava": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "priroda": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor.",
+      "bydleni": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "skoly": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor.",
+      "komunita": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo vel neque interdum sollicitudin. Integer vitae urna at sem suscipit tincidunt. Praesent euismod, sapien eget viverra facilisis, neque nisi tincidunt mauris, vitae consequat justo ipsum nec lorem.\n\nSed dignissim sem at metus tincidunt, id malesuada nisi consequat. Aenean quis velit sit amet nunc sodales interdum. Nulla facilisi. Maecenas euismod, magna vel fermentum volutpat, nibh augue cursus enim, non tincidunt justo neque at lacus.",
+      "radnice": "Quisque vitae justo vel nunc ullamcorper consequat. Suspendisse potenti. Aliquam erat volutpat. Duis et nibh vitae nunc porttitor consequat. Fusce faucibus, libero at posuere finibus, enim augue tincidunt velit, sed ullamcorper est metus vitae lacus.\n\nCras eget magna ut sapien pellentesque blandit. Vivamus lacinia urna quis ante varius, vel mattis erat iaculis. Proin efficitur sapien ac felis eleifend, vitae interdum purus tempor."
+    }
+  }
+}

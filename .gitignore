@@ -1,0 +1,12 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+.wrangler/
+.env
+.env.*
+!.env.example
+Thumbs.db
+.DS_Store
+.idea/
+/WhatsApp Image *.jpeg

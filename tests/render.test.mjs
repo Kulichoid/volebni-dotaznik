@@ -1,0 +1,72 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import { renderSite, validateContent } from "../scripts/render.mjs";
+
+function fixture() {
+  return {
+    demo: false,
+    year: 2026,
+    parties: [
+      {
+        id: "alfa",
+        number: 1,
+        name: "Alfa & Beta",
+        shortName: "Alfa",
+        logo: "alfa.svg",
+        logoAlt: "Alfa",
+      },
+      {
+        id: "beta",
+        number: 2,
+        name: "Beta",
+        shortName: "Beta",
+        logo: "beta.svg",
+        logoAlt: "Beta",
+      },
+    ],
+    questions: [
+      { id: "doprava", topic: "Doprava", text: "Jak <bezpečně> cestovat?" },
+    ],
+    answers: {
+      alfa: { doprava: "Odpověď A <script>alert(1)</script>" },
+      beta: { doprava: null },
+    },
+  };
+}
+
+test("answers remain assigned to their parties and missing answers are not invented", () => {
+  const html = renderSite(fixture());
+  assert.match(html, /Odpověď A &lt;script&gt;alert\(1\)&lt;\/script&gt;/);
+  assert.doesNotMatch(html, /<script>alert/);
+  assert.match(html, /Odpověď zatím není k dispozici/);
+  assert.match(html, /Alfa &amp; Beta/);
+  assert.match(html, /Jak &lt;bezpečně&gt; cestovat\?/);
+});
+
+test("demo wording disappears only when demo mode is disabled", () => {
+  const data = fixture();
+  assert.doesNotMatch(renderSite(data), /Ukázková verze/);
+  data.demo = true;
+  assert.match(renderSite(data), /Ukázková verze/);
+});
+
+test("duplicate party IDs cannot silently overwrite answers", () => {
+  const data = fixture();
+  data.parties[1].id = "alfa";
+  assert.throws(() => validateContent(data), /duplicit/i);
+});
+
+test("unknown question references fail the build instead of hiding supplied answers", () => {
+  const data = fixture();
+  data.answers.alfa.typo = "Ztracená odpověď";
+  assert.throws(() => validateContent(data), /neznám/i);
+});
+
+test("unsafe identifiers and nonlocal logo paths are rejected", () => {
+  const data = fixture();
+  data.parties[0].id = 'a" onclick="alert(1)';
+  assert.throws(() => validateContent(data));
+  const other = fixture();
+  other.parties[0].logo = "https://third-party.example/logo.svg";
+  assert.throws(() => validateContent(other));
+});
