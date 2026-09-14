@@ -1772,3 +1772,13 @@ dialog::backdrop {
 }
 
 .respondent { margin: 10px 0 0; font-size: 13px; line-height: 1.6; color: #526364; }
+
+.about-intro p { max-width: 500px; }
+.about-intro p a.text-link {
+  display: inline;
+  margin: 0;
+  font-size: inherit;
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

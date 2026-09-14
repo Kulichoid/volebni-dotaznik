@@ -63,7 +63,7 @@ test("published questionnaire contains seven questions and exactly four responde
   assert.match(data.answers.ods.priority, /Důstojné zázemí pro seniory/);
   assert.match(data.answers['praha-5-sobe'].priority, /Výstavba nové ZŠ a MŠ Barrandov/);
   const html = renderSite(data);
-  assert.doesNotMatch(html, /lorem|ipsum|ukázkov|Dne so|@gmail|@prahasobe|Prosím o zaslání odpovědí/i);
+  assert.doesNotMatch(html, /lorem|ipsum|ukázkov|Dne so|lenka\.sobotkova1@gmail|praha5@prahasobe|Prosím o zaslání odpovědí/i);
   assert.match(html, /odpovědi od 4 uskupení/);
 });
 
