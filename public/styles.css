@@ -1770,3 +1770,5 @@ dialog::backdrop {
   padding: 12px 16px;
   margin-bottom: 18px;
 }
+
+.respondent { margin: 10px 0 0; font-size: 13px; line-height: 1.6; color: #526364; }

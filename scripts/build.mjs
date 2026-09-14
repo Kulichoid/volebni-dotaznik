@@ -15,5 +15,5 @@ await fs.mkdir(output, { recursive: true });
 await fs.cp(path.join(root, "public"), output, { recursive: true });
 await fs.writeFile(path.join(output, "index.html"), html);
 console.log(
-  `Vytvořeno dist/index.html: ${content.parties.length} uskupení, ${content.questions.length} otázek. Režim: ${content.demo ? "UKÁZKA" : "OSTRÝ OBSAH"}.`,
+  `Vytvořeno dist/index.html: ${content.parties.length} uskupení, ${content.questions.length} otázek. Režim: OSTRÝ OBSAH.`,
 );

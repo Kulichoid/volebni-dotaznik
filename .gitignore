@@ -10,3 +10,6 @@ Thumbs.db
 .DS_Store
 .idea/
 /WhatsApp Image *.jpeg
+
+# Soukromé podklady s e-mailovými kontakty
+/responses.txt

@@ -12,8 +12,8 @@ export function validateContent(data) {
   const fail = (message) => {
     throw new Error(`Chyba obsahu: ${message}`);
   };
-  if (typeof data.demo !== "boolean" || !Number.isInteger(data.year))
-    fail("demo musí být boolean a year celé číslo.");
+  if (data.demo !== false || !Number.isInteger(data.year))
+    fail("Web vyžaduje ostrý obsah (demo: false) a platný rok.");
   for (const key of ["parties", "questions"]) {
     if (!Array.isArray(data[key]) || !data[key].length)
       fail(`${key} nesmí být prázdné.`);
@@ -87,10 +87,10 @@ function logo(party) {
 function navLink(party) {
   return `<a class="party-link" href="#strana-${party.id}" data-party-link="${party.id}"><span class="nav-number">${String(party.number).padStart(2, "0")}</span>${logo(party)}<span>${escapeHtml(party.shortName)}</span>${icon("chevron")}</a>`;
 }
-function answerHtml(answer, demo) {
+function answerHtml(answer, hasResponded) {
   if (!answer?.trim())
-    return `<p class="missing-answer">Odpověď zatím není k dispozici.</p><p>Jakmile ji doplníme, najdete ji na tomto místě.</p>`;
-  return `${demo ? '<span class="sample-label">Ukázková odpověď · lorem ipsum</span>' : ""}${answer
+    return `<p class="missing-answer">${hasResponded ? "Na tuto otázku zatím odpověď nedorazila." : "Toto uskupení zatím na zaslané dotazy neodpovědělo."}</p><p>Jakmile odpověď obdržíme, zveřejníme ji zde.</p>`;
+  return `${answer
     .split(/\n\s*\n/)
     .map((p) => `<p>${escapeHtml(p).replaceAll("\n", "<br>")}</p>`)
     .join("")}`;
@@ -98,7 +98,9 @@ function answerHtml(answer, demo) {
 
 export function renderSite(data) {
   validateContent(data);
-  const { demo, year, questions, answers } = data;
+  const { year, questions, answers } = data;
+  const count = id => questions.filter(q => answers[id]?.[q.id]?.trim()).length;
+  const responded = data.parties.filter(p => count(p.id) > 0).length;
   const parties = [...data.parties].sort((a, b) => a.number - b.number);
   const e = escapeHtml;
   const sections = parties
@@ -106,7 +108,7 @@ export function renderSite(data) {
       (
         p,
       ) => `<section class="party-section" id="strana-${p.id}" data-party-section="${p.id}" aria-labelledby="title-${p.id}">
-    <header class="party-heading">${logo(p)}<div><span class="eyebrow">Kandidátní listina č. ${p.number}</span><h3 id="title-${p.id}">${e(p.name)}</h3></div><span class="content-badge">${demo ? "Ukázka odpovědí" : `${questions.filter((q) => answers[p.id]?.[q.id]?.trim()).length} / ${questions.length} odpovědí`}</span></header>
+    <header class="party-heading">${logo(p)}<div><span class="eyebrow">Kandidátní listina č. ${p.number}</span><h3 id="title-${p.id}">${e(p.name)}</h3>${p.respondent ? `<p class="respondent">Odpovídá: ${e(p.respondent)}</p>` : ""}</div><span class="content-badge">${count(p.id) ? `${count(p.id)} / ${questions.length} odpovědí` : "Zatím bez odpovědi"}</span></header>
     <div class="question-list">${questions
       .map(
         (
@@ -114,7 +116,7 @@ export function renderSite(data) {
           index,
         ) => `<details class="question" id="${p.id}-${q.id}" data-question="${q.id}" ${index === 0 ? "open" : ""}>
       <summary><span class="question-number">${String(index + 1).padStart(2, "0")}</span><span class="question-title"><span class="topic-label">${e(q.topic)}</span><span>${e(q.text)}</span></span><span class="expand-icon">${icon("plus")}</span></summary>
-      <div class="answer-body">${answerHtml(answers[p.id]?.[q.id], demo)}</div>
+      <div class="answer-body">${answerHtml(answers[p.id]?.[q.id], count(p.id) > 0)}</div>
     </details>`,
       )
       .join("")}</div>
@@ -126,10 +128,9 @@ export function renderSite(data) {
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Praha 5. Naše otázky. Jejich odpovědi. | Volební anketa ${year}</title>
-  <meta name="description" content="Volební anketa Barrandov · Praha 5. Otázky pro kandidující uskupení o místě, kde žijeme. Čtěte odpovědi podle strany nebo porovnávejte stejnou otázku.${demo ? " Ukázková verze s ilustračním obsahem." : ""}">
-  ${demo ? '<meta name="robots" content="noindex, follow">' : ""}
+  <meta name="description" content="Volební anketa Barrandov · Praha 5. Otázky pro kandidující uskupení o místě, kde žijeme. Čtěte odpovědi podle strany nebo porovnávejte stejnou otázku.">
   <meta name="theme-color" content="#172b2c"><meta property="og:type" content="website"><meta property="og:locale" content="cs_CZ">
-  <meta property="og:title" content="Praha 5. Naše otázky. Jejich odpovědi."><meta property="og:description" content="Volební anketa Barrandov · Praha 5.${demo ? " Ukázková verze." : " Prostor pro otázky, které se nás týkají."}">
+  <meta property="og:title" content="Praha 5. Naše otázky. Jejich odpovědi."><meta property="og:description" content="Volební anketa Barrandov · Praha 5. Prostor pro otázky, které se nás týkají.">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preload" href="/assets/manrope-regular.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="/styles.css"><script type="module" src="/app.js"></script>
 </head>
@@ -152,8 +153,8 @@ export function renderSite(data) {
     <div class="context-strip"><div>${icon("leaf")}<span>Příroda.<small>Kterou máme za rohem.</small></span></div><div>${icon("building")}<span>Lidé.<small>Se kterými tvoříme čtvrť.</small></span></div><div>${icon("chat")}<span>Budoucnost.<small>O které má smysl mluvit.</small></span></div></div>
     <section class="answers-section content-width" id="odpovedi" aria-labelledby="answers-title" tabindex="-1">
       <div class="section-heading"><div><span class="eyebrow">POZNEJTE JEJICH POHLED</span><h2 id="answers-title">Odpovědi bez zkratek.</h2></div><div class="section-count"><strong>${parties.length}</strong> uskupení <span>·</span> <strong>${questions.length}</strong> otázek</div></div>
+      <p class="section-description">Tereza Vránová oslovila kandidující uskupení se stejnými otázkami o Barrandově. Zatím jsme obdrželi odpovědi od ${responded} uskupení z ${parties.length}. Níže najdete jejich plné znění.</p>
       <p class="section-description">Vyberte si uskupení a projděte jeho odpovědi. Nebo se podívejte, jak na jednu otázku odpovídají ostatní.</p>
-      ${demo ? `<div class="demo-notice" role="note">${icon("info")}<p><strong>Ukázková verze</strong><span>Otázky a odpovědi zatím obsahují lorem ipsum. Nejde o skutečná stanoviska uskupení. Obsah ankety doplníme později.</span></p><span class="demo-tag">PŘIPRAVUJEME</span></div>` : ""}
       <div class="reader-controls enhanced-only"><div class="view-switch" role="group" aria-label="Způsob čtení"><button type="button" data-view="party" aria-pressed="true">${icon("building")}Podle uskupení</button><button type="button" data-view="question" aria-pressed="false">${icon("chat")}Podle otázky</button></div><button class="text-button" id="share-selection">${icon("share")}<span>Sdílet výběr</span></button></div>
       <div class="share-fallback" id="share-fallback" hidden><label for="share-url">Zkopírujte odkaz na tento výběr</label><input id="share-url" type="text" readonly><button class="text-button" id="close-share">Zavřít</button></div><p id="status-message" class="status-message" role="status" aria-live="polite"></p>
       <div class="selection-bar enhanced-only"><div class="field" id="party-field"><label for="party-select">Vyberte uskupení</label><select id="party-select">${parties.map((p) => `<option value="${p.id}">${p.number}. ${e(p.shortName)}</option>`).join("")}</select></div><div class="field" id="question-field" hidden><label for="question-select">Vyberte otázku</label><select id="question-select">${questions.map((q, i) => `<option value="${q.id}">${String(i + 1).padStart(2, "0")} · ${e(q.topic)}</option>`).join("")}</select></div><button class="text-button expand-all" id="expand-all">${icon("plus")}<span>Rozbalit vše</span></button><span id="comparison-hint" hidden>Stejná otázka. Všechna uskupení.</span></div>
@@ -161,7 +162,7 @@ export function renderSite(data) {
       <section id="comparison-reader" aria-labelledby="comparison-title" hidden><div class="comparison-question"><span class="eyebrow" id="comparison-topic"></span><h3 id="comparison-title"></h3></div><div id="comparison-list"></div></section>
       <p class="order-note">${icon("info")}Uskupení jsou řazena podle vylosovaného čísla kandidátní listiny. Pořadí není hodnocením.</p>
     </section>
-    <section class="about-section content-width" id="o-ankete" aria-labelledby="about-title"><div class="about-intro"><span class="eyebrow">NÁŠ DOMOV. SPOLEČNÁ BUDOUCNOST.</span><h2 id="about-title">Než se rozhodnete,<br>ptejte se.</h2><p>Barrandov, Hlubočepy, Smíchov, Košíře, Radlice i Jinonice. Různá místa, jeden společný zájem: dobře žít v Praze 5.</p><a class="text-link" href="#odpovedi">Zpátky k odpovědím ${icon("arrow")}</a></div><div class="about-points"><article><span>01</span><div><h3>Stejný prostor pro všechny</h3><p>Jednotné otázky a stejné podmínky pro prezentaci každého kandidujícího uskupení.</p></div></article><article><span>02</span><div><h3>Vlastní názor je na vás</h3><p>Anketa nesestavuje žebříček ani nedoporučuje, koho volit. Pomáhá číst a porovnávat odpovědi.</p></div></article><article><span>03</span><div><h3>Jasně označený obsah</h3><p>${demo ? "Nyní si prohlížíte ukázku. Skutečné otázky a dodané odpovědi zde zveřejníme později." : "Chybějící odpovědi jsou označené. Najdete tu pouze texty, které byly do ankety doplněné."}</p></div></article></div></section>
+    <section class="about-section content-width" id="o-ankete" aria-labelledby="about-title"><div class="about-intro"><span class="eyebrow">NÁŠ DOMOV. SPOLEČNÁ BUDOUCNOST.</span><h2 id="about-title">Než se rozhodnete,<br>ptejte se.</h2><p>Barrandov, Hlubočepy, Smíchov, Košíře, Radlice i Jinonice. Různá místa, jeden společný zájem: dobře žít v Praze 5.</p><a class="text-link" href="#odpovedi">Zpátky k odpovědím ${icon("arrow")}</a></div><div class="about-points"><article><span>01</span><div><h3>Stejný prostor pro všechny</h3><p>Jednotné otázky a stejné podmínky pro prezentaci každého kandidujícího uskupení.</p></div></article><article><span>02</span><div><h3>Vlastní názor je na vás</h3><p>Anketa nesestavuje žebříček ani nedoporučuje, koho volit. Pomáhá číst a porovnávat odpovědi.</p></div></article><article><span>03</span><div><h3>Jasně označený obsah</h3><p>Zveřejňujeme dodané odpovědi bez obsahových úprav. Vynechány jsou pouze e-mailové hlavičky, pozdravy a kontaktní údaje; sjednoceno je zalomení textu. U uskupení, která zatím neodpověděla, tuto skutečnost uvádíme.</p></div></article></div></section>
     <footer class="footer content-width"><div><a href="#uvod" class="footer-brand">BARRANDOV <span>·</span> PRAHA 5</a><p>Naše místo. Naše budoucnost.</p></div><div class="footer-links"><a href="#o-ankete">O anketě</a><a href="https://www.novinky.cz/p/vysledky-voleb/2026/komunalni-volby/obvod/500143-praha-5/kandidati">Zdroj kandidátních listin ${icon("arrow")}</a><a href="/zdroje.html">Fotografie a loga</a></div><p class="footer-note">Občanská volební anketa · ${year}. Nejde o oficiální web městské části.<br>Bez reklam a sledovacích cookies.</p></footer>
   </main>
 </body></html>`;

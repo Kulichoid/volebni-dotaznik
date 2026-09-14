@@ -1,13 +1,14 @@
-# Ověření verze 1.0
+# Ověření skutečných odpovědí
 
 Provedeno 14. 9. 2026 na Windows, Node.js 24.12.0 a Google Chrome.
 
-- `npm test`: 5 úspěšných testů. Ověřeno přiřazení odpovědí, chybějící obsah, escapování HTML, ukázkový stav a odmítnutí chybných dat.
-- `npm run build`: úspěšné sestavení, 12 uskupení a 6 otázek, ukázkový režim.
-- `npm run test:browser -- --workers 2`: 17 úspěšných testů; 1 úmyslně vynechaný scénář mobilní nabídky na desktopu. Tentýž scénář na mobilu prošel.
-- Testy prohlížeče zahrnují přepínání stran, porovnání podle otázky, historii a reload, přímé odkazy, bezpečný výchozí stav neznámého URL, rozbalení/sbalení, Enter, mobilní dialog a Escape, fallback sdílení při zamítnutí schránky, obsah bez JavaScriptu a načtení všech log.
-- Axe WCAG 2.1 A/AA: bez hlášených porušení na kontrolovaném desktopovém i mobilním zobrazení. Automatický audit není úplnou certifikací přístupnosti.
-- Vizuálně zkontrolován desktop 1440 px, telefon 390 px a dlouhá koaliční jména. Testem ověřeno nepřetékání při 320 a 390 px; samostatná regrese chrání šířku hlavičky strany.
-- Provedena samostatná read-only kontrola kódu. Bez blokujících nálezů; poznámka k opětovnému sestavení po změně souborů je zohledněna v README.
+- Importováno 28 úplných odpovědí ke 7 otázkám od Pirátů, Prahy 5 Sobě, ODS a SEN pro Prahu 5. Osm dalších uskupení má nedodané odpovědi označené.
+- Samostatná kontrola proti e-mailovým podkladům potvrdila přiřazení, úplnost a podpisy. Odstraněny jsou pouze hlavičky, pozdravy, kontaktní údaje a citovaná organizační výzva. Sjednoceno je zalomení.
+- `npm test`: 6 úspěšných testů včetně přiřazení, ostrého obsahu, nepřítomnosti výplňových textů a bezpečného zobrazení textu.
+- `npm run build`: úspěšné sestavení 12 uskupení a 7 otázek v ostrém režimu.
+- Prohlížeč: původních 17 scénářů prošlo, desktopový scénář mobilní nabídky byl úmyslně přeskočen. Dva přidané scénáře skutečných odpovědí také prošly. Celkem 19 úspěšných scénářů.
+- Ověřeny přímé odkazy, historie, sdílení, porovnání, akordeony, mobilní nabídka, ovládání klávesnicí, obrázky a čtení bez JavaScriptu.
+- Axe WCAG 2.1 A/AA: bez hlášených porušení na kontrolovaném desktopovém a mobilním zobrazení. Automatický audit není úplnou certifikací.
+- Vizuálně zkontrolovány skutečné odpovědi při 1440 a 390 px. Testy ověřily nepřetékání i při šířce 320 px.
 
-Omezení: mobilní testy běží v emulovaném viewportu a dotykovém profilu Chromu, nikoli na fyzickém zařízení se Safari. Cloudflare projekt ani doména v rámci této verze nebyly vytvářeny. Odesílaný web stále obsahuje výslovně označené ukázkové otázky a odpovědi.
+Testovací server má samostatný port 4175 a vždy čerstvé sestavení. Mobilní testy používají emulaci Chromu, nikoli fyzické zařízení se Safari. Nasazení do Cloudflare nebylo provedeno.

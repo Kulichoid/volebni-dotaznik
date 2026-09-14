@@ -7,7 +7,7 @@ Ověřeno 14. 9. 2026. Podklady se načítají pouze při přípravě projektu; 
 - [Novinky.cz, kandidáti Praha 5, komunální volby 2026](https://www.novinky.cz/p/vysledky-voleb/2026/komunalni-volby/obvod/500143-praha-5/kandidati), stránka uvádí jako zdroj ČSÚ. Převzatá jsou jména 12 kandidátních listin a jejich vylosované pořadí, nikoli osobní údaje kandidátů nebo jejich politický program.
 - [Praha 5, Volby 2026](https://www.praha5.cz/volby-2026/), termín 9. a 10. října 2026.
 
-Otázky a odpovědi jsou čistě lorem ipsum na výslovné zadání uživatele. Neobsahují vymyšlená politická stanoviska. Názvy témat, úvod a texty ovládání jsou vlastní copywriting.
+Otázky a 28 odpovědí pocházejí z e-mailových podkladů dodaných organizátorkou ankety Terezou Vránovou. Odpověděli Piráti (Lenka Sobotková), Praha 5 Sobě (Radka Šimková, Lucie Boudová a tým), ODS a SEN pro Prahu 5. Ostatních osm uskupení zatím neodpovědělo. Znění odpovědí je zachováno, upraveno pouze zalomení; vynechány jsou e-mailové hlavičky, pozdravy, kontaktní adresy a citovaná výzva. Původní neveřejný soubor se nepublikuje.
 
 ## Loga
 

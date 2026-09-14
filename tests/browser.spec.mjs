@@ -1,6 +1,20 @@
 import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 
+test("real replies and nonrespondents remain distinct on narrow screens", async ({ page }) => {
+  await page.setViewportSize({ width: 320, height: 760 });
+  await page.goto('/?party=praha-5-sobe#odpovedi');
+  await expect(page.locator('body')).not.toContainText(/lorem|ipsum|ukázkov/i);
+  await page.locator('#praha-5-sobe-bezpecnost summary').click();
+  await expect(page.locator('#praha-5-sobe-bezpecnost .answer-body')).toContainText('Na Barrandov, stejně');
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await page.getByRole('button', {name: 'Podle otázky', exact: true}).click();
+  await page.getByLabel('Vyberte otázku').selectOption('priority');
+  await expect(page.locator('#comparison-list .missing-answer')).toHaveCount(8);
+  await expect(page.locator('#comparison-list')).toContainText('Zřídíme mobilní policejní strážnici');
+  await expect(page.locator('#comparison-list')).toContainText('Důstojné zázemí pro seniory');
+});
+
 test("sharing remains usable when the browser denies clipboard access", async ({
   page,
 }) => {
@@ -15,12 +29,12 @@ test("sharing remains usable when the browser denies clipboard access", async ({
       },
     });
   });
-  await page.goto("/?view=question&party=pirati&question=skoly#odpovedi");
+  await page.goto("/?view=question&party=pirati&question=zakladni-skoly#odpovedi");
   await page.getByRole("button", { name: "Sdílet výběr" }).click();
   await expect(
     page.getByRole("textbox", { name: "Zkopírujte odkaz na tento výběr" }),
   ).toHaveValue(
-    "http://127.0.0.1:4173/?view=question&party=pirati&question=skoly#odpovedi",
+    "http://127.0.0.1:4175/?view=question&party=pirati&question=zakladni-skoly#odpovedi",
   );
   await expect(page.getByRole("status")).toContainText(
     "Odkaz můžete zkopírovat",
@@ -34,10 +48,10 @@ test("sharing remains usable when the browser denies clipboard access", async ({
 test("shared links open the selected answer area and invalid selections fall back", async ({
   page,
 }) => {
-  await page.goto("/?view=question&party=pirati&question=skoly#odpovedi");
+  await page.goto("/?view=question&party=pirati&question=zakladni-skoly#odpovedi");
   await expect(
     page.getByRole("combobox", { name: "Vyberte otázku" }),
-  ).toHaveValue("skoly");
+  ).toHaveValue("zakladni-skoly");
   expect(
     await page.evaluate(
       () => document.querySelector("#odpovedi").getBoundingClientRect().top,
@@ -81,10 +95,10 @@ test("comparison shows each party for exactly the selected question", async ({
 }) => {
   await page.goto("/?party=ano#odpovedi");
   await page.getByRole("button", { name: "Podle otázky", exact: true }).click();
-  await page.getByLabel("Vyberte otázku").selectOption("bydleni");
+  await page.getByLabel("Vyberte otázku").selectOption("vybavenost");
   await expect(page.locator("#comparison-list article")).toHaveCount(12);
-  await expect(page.locator("#comparison-title")).toContainText("Donec at sem");
-  await expect(page).toHaveURL(/question=bydleni/);
+  await expect(page.locator("#comparison-title")).toContainText("Na Barrandově pokračuje rozsáhlá bytová výstavba");
+  await expect(page).toHaveURL(/question=vybavenost/);
   await page
     .getByRole("button", { name: "Podle uskupení", exact: true })
     .click();
@@ -98,7 +112,7 @@ test("question controls expand and collapse only the active party", async ({
   await page.getByRole("button", { name: "Rozbalit vše" }).click();
   await expect(
     page.locator('[data-party-section="ods"] details[open]'),
-  ).toHaveCount(6);
+  ).toHaveCount(7);
   await page.getByRole("button", { name: "Sbalit vše" }).click();
   await expect(
     page.locator('[data-party-section="ods"] details[open]'),
@@ -135,7 +149,7 @@ test("mobile navigation closes on selection and Escape and restores focus", asyn
 test("all answers remain readable without JavaScript", async ({ browser }) => {
   const context = await browser.newContext({ javaScriptEnabled: false });
   const page = await context.newPage();
-  await page.goto("http://127.0.0.1:4173/");
+  await page.goto("http://127.0.0.1:4175/");
   await expect(page.locator("[data-party-section]:visible")).toHaveCount(12);
   await expect(
     page.getByRole("button", { name: "Podle otázky", exact: true }),
