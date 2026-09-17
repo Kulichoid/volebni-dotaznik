@@ -2,7 +2,7 @@
 
 Responzivní web pro odpovědi kandidujících uskupení v komunálních volbách 2026. Světlá čtecí plocha, tmavá navigace, místní fotografie a dvě možnosti čtení: podle uskupení nebo podle otázky.
 
-**Web obsahuje skutečné odpovědi čtyř uskupení:** Piráti, Praha 5 Sobě, ODS a SEN pro Prahu 5. Sedm společných otázek zaslala Tereza Vránová. Ostatních osm uskupení zatím neodpovědělo. Pořadí vychází z vylosovaných čísel kandidátek. Původ jmen a grafiky najdete v [přehledu zdrojů](docs/sources.md).
+**Web obsahuje skutečné odpovědi pěti uskupení:** Naše Praha 5, Piráti, Praha 5 Sobě, ODS a SEN pro Prahu 5. Sedm společných otázek zaslala Tereza Vránová. Ostatních sedm uskupení zatím neodpovědělo. Pořadí vychází z vylosovaných čísel kandidátek. Původ jmen a grafiky najdete v [přehledu zdrojů](docs/sources.md).
 
 ## Spuštění
 
